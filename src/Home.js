@@ -25,7 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
