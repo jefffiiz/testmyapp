@@ -54,6 +54,8 @@ target 'myapp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'AnylineReact', path: '../node_modules/anyline-ocr-react-native-module/ios'
+  
   target 'myappTests' do
     inherit! :complete
     # Pods for testing

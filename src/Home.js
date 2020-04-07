@@ -24,6 +24,8 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Config from 'react-native-config';
 
 const Home = ({ navigation }) => {
   return (
@@ -41,6 +43,10 @@ const Home = ({ navigation }) => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
+              <Icon name="ios-home" size={24} />
+              <Text style={styles.sectionTitle}>{Config.API_URL}</Text>
+            </View>
+            <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Genius Scan</Text>
               <Button
                 title="Genius Scan"
@@ -48,16 +54,18 @@ const Home = ({ navigation }) => {
               />
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
+              <Text style={styles.sectionTitle}>Anyline Scan</Text>
+              <Button
+                title="Anyline Scan"
+                onPress={() => navigation.navigate('AnylineScan')}
+              />
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
+              <Text style={styles.sectionTitle}>Document Scan</Text>
+              <Button
+                title="Document Scan"
+                onPress={() => navigation.navigate('DocumentScan')}
+              />
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Learn More</Text>

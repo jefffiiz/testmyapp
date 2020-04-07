@@ -34,6 +34,9 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://www.jitpack.io' }
+        maven {
+            url 'https://anylinesdk.blob.core.windows.net/maven/'
+        }
         flatDir {
             dirs "$rootDir/../node_modules/@thegrizzlylabs/react-native-genius-scan/android/libs"
         }

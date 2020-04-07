@@ -1,4 +1,8 @@
 PODS:
+  - Anyline (20)
+  - AnylineReact (20.0.0):
+    - Anyline (~> 20.0)
+    - React
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.4)
   - CocoaLibEvent (1.0.0)
@@ -233,6 +237,8 @@ PODS:
     - React-cxxreact (= 0.62.0)
     - React-jsi (= 0.62.0)
   - React-jsinspector (0.62.0)
+  - react-native-config (1.0.0):
+    - React
   - react-native-safe-area-context (0.7.3):
     - React
   - React-RCTActionSheet (0.62.0):
@@ -300,17 +306,26 @@ PODS:
     - React
   - RNGestureHandler (1.6.1):
     - React
+  - RNImageToPdf (1.2.0):
+    - React
   - RNReanimated (1.7.1):
+    - React
+  - RNRectangleScanner (1.0.10):
     - React
   - RNScreens (2.4.0):
     - React
   - RNShare (3.1.2):
+    - React
+  - RNSVG (12.0.3):
+    - React
+  - RNVectorIcons (6.6.0):
     - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - AnylineReact (from `../node_modules/anyline-ocr-react-native-module/ios`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
@@ -332,6 +347,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-config (from `../node_modules/react-native-config`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -347,13 +363,18 @@ DEPENDENCIES:
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNGeniusScan (from `../node_modules/@thegrizzlylabs/react-native-genius-scan/ios`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNImageToPdf (from `../node_modules/react-native-image-to-pdf`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNRectangleScanner (from `../node_modules/react-native-rectangle-scanner/ios`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNShare (from `../node_modules/react-native-share`)
+  - RNSVG (from `../node_modules/react-native-svg`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
+    - Anyline
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
@@ -368,6 +389,8 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  AnylineReact:
+    :path: "../node_modules/anyline-ocr-react-native-module/ios"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -396,6 +419,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-config:
+    :path: "../node_modules/react-native-config"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-RCTActionSheet:
@@ -424,16 +449,26 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@thegrizzlylabs/react-native-genius-scan/ios"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNImageToPdf:
+    :path: "../node_modules/react-native-image-to-pdf"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
+  RNRectangleScanner:
+    :path: "../node_modules/react-native-rectangle-scanner/ios"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNShare:
     :path: "../node_modules/react-native-share"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Anyline: 5cc34163f62dfaa64d4157600f4e960e39f61135
+  AnylineReact: 50c70ee297643d3a7f4a966b96db95c7235913d8
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
@@ -459,6 +494,7 @@ SPEC CHECKSUMS:
   React-jsi: bc8166d6833cdcb0848c80710b26ce63fad2c099
   React-jsiexecutor: 8bf0b2707f05865113415088c398a7f98c0cf546
   React-jsinspector: 8e5913c4c6c54f0d3f9c9fc630c465a89cded65d
+  react-native-config: 7db9b96479164dfd7b2be68eb9079e08279511c4
   react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
   React-RCTActionSheet: 674afbc8b9c76e0a83520e0a51da29a70802c03f
   React-RCTAnimation: f5f24330d09ee677fb49e0782f8321868f4df431
@@ -473,12 +509,16 @@ SPEC CHECKSUMS:
   RNCMaskedView: 76c40a1d41c3e2535df09246a2b5487f04de0814
   RNGeniusScan: daa1cf2a1ed60a542e16f3c4fd2796ef3e854398
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
+  RNImageToPdf: 43fd91d019b3ee8ae6aba7f2d8c40ca4a55088ff
   RNReanimated: 4e102df74a9674fa943e05f97f3362b6e44d0b48
+  RNRectangleScanner: 0bb9b67ed46f3558c8f956968b6c637946c3e78a
   RNScreens: b5c0e1b2b04512919e78bd3898e144a157ce2363
   RNShare: c19dbe4a7224098cd3cfc4d3b92c886ca817b3f0
+  RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: 9db9ff2025ad21d1ac0a8b3c85d5ac4e7c29d525
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: c843b60b9ae33d5ba4ce2041ea739df1a1a7ef1c
+PODFILE CHECKSUM: 5711619b83f1e7af08834e20a2c957a2a25eb71f
 
 COCOAPODS: 1.9.1

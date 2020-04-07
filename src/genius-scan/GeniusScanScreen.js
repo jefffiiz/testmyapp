@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -21,6 +21,13 @@ import Share from 'react-native-share';
 import RNGeniusScan from '@thegrizzlylabs/react-native-genius-scan';
 
 const GeniusScanScreen = () => {
+  useEffect(() => {
+    RNGeniusScan.setLicenceKey(
+      '533c50055c5e080203520359395e47044a1157055742584a4c5855125e4e5' +
+        '51e074c050f48595319084b5042123d00005a5b560953530007',
+    );
+  });
+
   // Refer to the Genius Scan SDK demo README.md for a list of the available options
   const configuration = {
     source: 'camera',
