@@ -7,6 +7,7 @@ import {
   Text,
   StatusBar,
   Button,
+  Platform,
 } from 'react-native';
 
 import {
@@ -22,10 +23,12 @@ import RNGeniusScan from '@thegrizzlylabs/react-native-genius-scan';
 
 const GeniusScanScreen = () => {
   useEffect(() => {
-    RNGeniusScan.setLicenceKey(
-      '533c50055c5e080203520359395e47044a1157055742584a4c5855125e4e5' +
-        '51e074c050f48595319084b5042123d00005a5b560953530007',
-    );
+    const key =
+      Platform.OS === 'android'
+        ? '533c50055c5e09000456015239525a0e4a0e4b0544466d08570e0c5f070e070855'
+        : '533c50055c5e080203520359395e47044a1157055742584a4c5855125e4e5' +
+          '51e074c050f48595319084b5042123d00005a5b560953530007';
+    RNGeniusScan.setLicenceKey(key);
   });
 
   // Refer to the Genius Scan SDK demo README.md for a list of the available options
