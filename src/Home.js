@@ -42,10 +42,10 @@ const Home = ({ navigation }) => {
             </View>
           )}
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
+            {/* <View style={styles.sectionContainer}>
               <Icon name="ios-home" size={24} />
               <Text style={styles.sectionTitle}>{Config.API_URL}</Text>
-            </View>
+            </View> */}
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Genius Scan</Text>
               <Button
