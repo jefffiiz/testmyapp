@@ -15,6 +15,9 @@
     "@react-navigation/stack": "^5.2.9",
     "@thegrizzlylabs/react-native-genius-scan": "^3.0.13",
     "anyline-ocr-react-native-module": "^20.0.0",
+    "expo-camera": "^8.2.0",
+    "expo-face-detector": "^8.1.0",
+    "expo-file-system": "^8.1.0",
     "react": "16.11.0",
     "react-native": "0.62.0",
     "react-native-config": "^1.0.0",
@@ -26,6 +29,7 @@
     "react-native-screens": "^2.4.0",
     "react-native-share": "^3.1.2",
     "react-native-svg": "^12.0.3",
+    "react-native-unimodules": "^0.9.1",
     "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
