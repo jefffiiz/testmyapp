@@ -19,7 +19,7 @@
     "expo-face-detector": "^8.1.0",
     "expo-file-system": "^8.1.0",
     "react": "16.11.0",
-    "react-native": "0.62.0",
+    "react-native": "0.62.2",
     "react-native-config": "^1.0.0",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-image-to-pdf": "^1.2.0",
