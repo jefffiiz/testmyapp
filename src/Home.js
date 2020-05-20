@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -31,6 +31,13 @@ import Config from 'react-native-config';
 import Toasty from './toasty/Toasty';
 
 const Home = ({ navigation }) => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log('useEffect', loading);
+    setLoading(true);
+  }, [loading]);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -68,6 +75,20 @@ const Home = ({ navigation }) => {
               <Button
                 title="Document Scan"
                 onPress={() => navigation.navigate('DocumentScan')}
+              />
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Face Detection</Text>
+              <Button
+                title="Face Detection"
+                onPress={() => navigation.navigate('FaceDetection')}
+              />
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Rect Hook</Text>
+              <Button
+                title="React Hook"
+                onPress={() => navigation.navigate('ReactHook')}
               />
             </View>
             <TouchableOpacity

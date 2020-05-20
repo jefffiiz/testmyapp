@@ -6,6 +6,10 @@
   	<string>${PRODUCT_NAME} Camera Usage</string>
   	<key>NSPhotoLibraryAddUsageDescription</key>
   	<string>${PRODUCT_NAME} library Usage</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>${PRODUCT_NAME} Microphone Usage</string>
+    <key>NSContactsUsageDescription</key>
+    <string>${PRODUCT_NAME} Contacts Usage</string>
   	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
