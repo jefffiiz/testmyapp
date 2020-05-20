@@ -15,6 +15,8 @@ import {
   Text,
   StatusBar,
   Button,
+  TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 import {
@@ -26,6 +28,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Config from 'react-native-config';
+import Toasty from './toasty/Toasty';
 
 const Home = ({ navigation }) => {
   return (
@@ -67,12 +70,16 @@ const Home = ({ navigation }) => {
                 onPress={() => navigation.navigate('DocumentScan')}
               />
             </View>
-            <View style={styles.sectionContainer}>
+            <TouchableOpacity
+              style={styles.sectionContainer}
+              onPress={() => {
+                Toasty.show('Awesome', Toasty.LONG);
+              }}>
               <Text style={styles.sectionTitle}>Learn More</Text>
               <Text style={styles.sectionDescription}>
                 Read the docs to discover what to do next:
               </Text>
-            </View>
+            </TouchableOpacity>
             <LearnMoreLinks />
           </View>
         </ScrollView>
