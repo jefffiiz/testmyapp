@@ -17,6 +17,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* myappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* myappTests.m */; };
+		4A59448C247662F8000765DA /* Toasty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A59448B247662F8000765DA /* Toasty.m */; };
+		4A5944932476831B000765DA /* IOSNativeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5944912476831B000765DA /* IOSNativeToast.m */; };
 		6F4C68E599A4963F92F3CF0A /* libPods-myapp-myappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB59A7F3089953AF4B9CF2 /* libPods-myapp-myappTests.a */; };
 		88A16D9D92A8D378A6B02C94 /* libPods-myapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D04448BA059B3A6F8DB4C9F6 /* libPods-myapp-tvOSTests.a */; };
 		CDCAC1EC743C99E5A240BDF3 /* libPods-myapp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3CD96DDF2A4EA92BE2988F /* libPods-myapp-tvOS.a */; };
@@ -55,6 +57,10 @@
 		2D02E47B1E0B4A5D006451C7 /* myapp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myapp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* myapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "myapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAB59A7F3089953AF4B9CF2 /* libPods-myapp-myappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myapp-myappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A59448B247662F8000765DA /* Toasty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Toasty.m; sourceTree = "<group>"; };
+		4A59448D24766428000765DA /* Toasty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Toasty.h; sourceTree = "<group>"; };
+		4A5944912476831B000765DA /* IOSNativeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOSNativeToast.m; sourceTree = "<group>"; };
+		4A5944922476831B000765DA /* IOSNativeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSNativeToast.h; sourceTree = "<group>"; };
 		4F3CD96DDF2A4EA92BE2988F /* libPods-myapp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myapp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A23A6C609F5801ED4075A1 /* Pods-myapp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myapp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-myapp-tvOS/Pods-myapp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5B1F093986928063B6F1B44C /* Pods-myapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myapp.debug.xcconfig"; path = "Target Support Files/Pods-myapp/Pods-myapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +155,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A59448A247662C6000765DA /* NativeModule */ = {
+			isa = PBXGroup;
+			children = (
+				4A5944922476831B000765DA /* IOSNativeToast.h */,
+				4A5944912476831B000765DA /* IOSNativeToast.m */,
+				4A59448D24766428000765DA /* Toasty.h */,
+				4A59448B247662F8000765DA /* Toasty.m */,
+			);
+			path = NativeModule;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +176,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				4A59448A247662C6000765DA /* NativeModule */,
 				13B07FAE1A68108700A75B9A /* myapp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* myappTests */,
@@ -465,7 +483,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-myapp-myappTests/Pods-myapp-myappTests-resources.sh",
 				"${PODS_ROOT}/Anyline/AnylineSDK_iOS_20/Framework/AnylineResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMLVisionFaceModel/GoogleMVFaceDetectorResources.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -486,7 +503,6 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AnylineResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -517,7 +533,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-myapp/Pods-myapp-resources.sh",
 				"${PODS_ROOT}/Anyline/AnylineSDK_iOS_20/Framework/AnylineResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMLVisionFaceModel/GoogleMVFaceDetectorResources.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -538,7 +553,6 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AnylineResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -678,6 +692,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5944932476831B000765DA /* IOSNativeToast.m in Sources */,
+				4A59448C247662F8000765DA /* Toasty.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);

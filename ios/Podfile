@@ -1,6 +1,5 @@
 platform :ios, '11.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
-require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 
 def add_flipper_pods!(versions = {})
   versions['Flipper'] ||= '~> 0.33.1'
@@ -77,6 +76,8 @@ target 'myapp' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   pod 'AnylineReact', path: '../node_modules/anyline-ocr-react-native-module/ios'
+
+  pod 'Toast', '~> 4.0.0'
   
   target 'myappTests' do
     inherit! :complete
@@ -84,7 +85,6 @@ target 'myapp' do
   end
 
   use_native_modules!
-  use_unimodules!
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
