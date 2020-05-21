@@ -78,13 +78,6 @@ const Home = ({ navigation }) => {
               />
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Face Detection</Text>
-              <Button
-                title="Face Detection"
-                onPress={() => navigation.navigate('FaceDetection')}
-              />
-            </View>
-            <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Rect Hook</Text>
               <Button
                 title="React Hook"

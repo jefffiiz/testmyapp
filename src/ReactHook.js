@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import Header from './component/Header';
-import { Permissions } from 'react-native-unimodules';
 
 const ReactHook = ({ navigation }) => {
   const [count, setCount] = useState(0);

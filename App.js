@@ -7,7 +7,6 @@ import GeniusScanScreen from './src/genius-scan/GeniusScanScreen';
 import AnylineScan from './src/anyline-scan/AnylineScan';
 import DocumentScanner from './src/document-scan/DocumentScanner';
 import ReactHook from './src/ReactHook';
-import CameraScreen from './src/face-detection/CameraScreen';
 
 const Stack = createStackNavigator();
 
@@ -21,13 +20,6 @@ const App = () => {
         <Stack.Screen
           name="DocumentScan"
           component={DocumentScanner}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="FaceDetection"
-          component={CameraScreen}
           options={{
             headerShown: false,
           }}
